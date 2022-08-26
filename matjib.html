@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>ComeToJEJU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/matjib.css">
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/matjib.js"></script> 
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <img src="img/logo.jpg" alt="logo" class="w3-bar-item logo">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFO</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">HONEYTIPS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="weather.html#page-content" class="w3-bar-item w3-button">WEATHER</a>
+        <a href="airline.html" class="w3-bar-item w3-button">FLIGHTS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INFO</a>
+  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="weather.html#page-content" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WEATHER</a>
+  <a href="airline.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FLIGHTS</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content main_content" style="max-width:2000px;margin-top:46px;">
+
+<!-- 흑돼지 -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Jeju Black Pig(흑돼지)</h1>
+      <h5 class="w3-padding-32" style="margin: 0 20px 0 0;">The Jeju Black Pig(Korean: 제주흑돼지; RR: Jeju heukdwaeji) is a Korean breed of domestic pig. Pork from the Jeju Black is said to have a unique taste, and forms the basis of some local dishes. It is smoked over burning hay, which gives it an unusual flavour and a chewy consistency.</h5>
+    </div>
+    
+    <div class="w3-third w3-center">
+      <div class="slideImage">
+        <img class="pork" src="img/pork.jpg" alt="pork">
+        <img class="pork" src="img/pork1.jpg" alt="pork1">
+      </div>
+    </div>
+
+    <!-- 흑돼지 맛집 지도 -->
+    <button id="show" class="w3-button w3-light-gray w3-border w3-border-black w3-round-large">Open Map</button>
+    <button id="hide" class="w3-button w3-light-gray w3-border w3-border-black w3-round-large">Close Map</button>
+    <div id="googleMap"></div>
+  </div>
+</div>
+
+<!-- 고기국수 -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <div class="slideImage">
+        <img class="noodle" src="img/noodle.jpg" alt="noodle">
+        <img class="noodle" src="img/noodle1.jpg" alt="noodle">
+      </div>
+    </div>
+
+    <div class="w3-twothird">
+      <h1 class="nTitle">Jeju Meat Noodle(고기국수)</h1>
+      <h5 class="w3-padding-32 noodleInfo" style="margin: 0 0 0 20px;">Pork Noodle Soup is a noodle variant that is available only on Jeju Island and not anywhere else in South Korea. Back in the olden days when resources were scarce, pork and noodles were considered to be premium food ingredients. Hence, Gogi-guksu was only prepared and meant to be consumed during special occasions.</h5>
+    </div>
+    
+    <!-- 고기국수 맛집 지도 -->
+    <button id="show1" class="w3-button w3-white w3-border w3-border-black w3-round-large">Open Map</button>
+    <button id="hide1" class="w3-button w3-white w3-border w3-border-black w3-round-large">Close Map</button>
+    <div id="googleMap1"></div>
+  </div>
+</div>
+
+<!-- 회 -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Jeju Seafood(해산물)</h1>
+      <h5 class="w3-padding-32" style="margin: 0 20px 0 0;">The Jeju Black Pig(Korean: 제주흑돼지; RR: Jeju heukdwaeji) is a Korean breed of domestic pig. Pork from the Jeju Black is said to have a unique taste, and forms the basis of some local dishes. It is smoked over burning hay, which gives it an unusual flavour and a chewy consistency.</h5>
+    </div>
+    
+    <div class="w3-third w3-center">
+      <div class="slideImage">
+        <img class="seafood" src="img/seafood.jpg" alt="seafood">
+        <img class="seafood" src="img/seafood1.jpg" alt="seafood">
+      </div>
+    </div>
+
+    <!-- 지도 -->
+    <button id="show2" class="w3-button w3-light-gray w3-border w3-border-black w3-round-large">Open Map</button>
+    <button id="hide2" class="w3-button w3-light-gray w3-border w3-border-black w3-round-large">Close Map</button>
+    <div id="googleMap2"></div>
+  </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-light-gray w3-padding-64 w3-center w3-opacity w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by Sungjoo Shin</p>
+</footer>
+  
+<!-- ↓key=API키, callback=함수 지정 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZDbkHT90Ja2hJFyjb5NMHivjXyCjfDg&callback=myMap"></script>
+</body>
+</html>

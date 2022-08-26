@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>ComeToJEJU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/main.js"></script> 
+<script src="js/tourspots.js"></script> 
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <img src="img/logo.jpg" alt="logo" class="w3-bar-item logo">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFO</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">HONEYTIPS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="weather.html#page-content" class="w3-bar-item w3-button">WEATHER</a>
+        <a href="airline.html" class="w3-bar-item w3-button">FLIGHTS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INFO</a>
+  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="weather.html#page-content" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WEATHER</a>
+  <a href="airline.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FLIGHTS</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content w3-light-grey" style="max-width:2000px;margin-top:46px">
+  <div class="w3-container">
+    <h1><b>Tour Spots</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+      <button id="all" class="filter w3-button w3-black w3-white">ALL</button>
+      <button id="mountain" class="filter w3-button w3-white filterIcon"><i class="material-icons w3-margin-right">landscape</i><span class="iconFilter">Mountain View</span></button>
+      <button id="ocean" class="filter w3-button  w3-white filterIcon"><i class="material-icons w3-margin-right">beach_access</i><span class="iconFilter">Ocean View</span></button>
+      <button id="activity" class="filter w3-button w3-white filterIcon"><i class="material-icons w3-margin-right">directions_run</i><span class="iconFilter">Activity</span></button>
+    </div>
+  </div>
+</div>
+
+  <!-- mountain view -->
+  <div class="w3-row-padding w3-light-grey">
+    <div class="mountain w3-third w3-container w3-margin-bottom">
+      <img src="img/mountain.jpeg" alt="m" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Geum Oreum (금오름)</b></p>
+        <p>One of the mosy beutiful oreum in Jeju, easy to climb, and able to see unforgettable scene.</p>
+      </div>
+    </div>
+    <div class="mountain w3-third w3-container w3-margin-bottom">
+      <img src="img/mountain1.jpeg" alt="m1" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Secret Forest (비밀의 숲)</b></p>
+        <p>The lush, green countryside and is a perfect place to stop, take a deep breath, and stroll through Jeju’s peaceful forests and fields.</p>
+      </div>
+    </div>
+    <div class="mountain w3-third w3-container">
+      <img src="img/mountain2.jpg" alt="m2" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Halla Mountain (한라산)</b></p>
+        <p>Halla Mountain is a massive shield volcano which forms the bulk of Jeju Island and is often taken as representing the island itself.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ocean view -->
+  <div class="w3-row-padding w3-light-grey">
+    <div class="ocean w3-third w3-container w3-margin-bottom">
+      <img src="img/ocean.png" alt="o" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Panpopogu (판포포구)</b></p>
+        <p>One of my best places to swim. Rent snorkeling gear, paddle boats, tubes etc, for more enjoy swimming</p>
+      </div>
+    </div>
+    <div class="ocean w3-third w3-container">
+      <img src="img/ocean1.jpeg" alt="o1" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Hamdeok Beach (함덕해수욕장)</b></p>
+        <p>One of the top beaches on Jeju Island. Go before the tides recede... Before 4pm if you want to get in the water. Or go for the sunset.</p>
+      </div>
+    </div>
+    <div id="seop" class="ocean w3-third w3-container w3-margin-bottom">
+      <img src="img/ocean2.jpg" alt="o2" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Seopjikoji (섭지코지)</b></p>
+        <p>Seopjikoji is a coastal attraction area on Jeju Island. Take a walk along the coast and enjoy the best scenery</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- activity -->
+  <div class="w3-row-padding w3-light-grey">
+    <div class="activity w3-third w3-container">
+      <img src="img/activity.png" alt="a" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>9.81 Park (9.81 파크)</b></p>
+        <p>If you like driving or enjoying speeding around a race track with the family, this destination is an excellent option for adults and kids.</p>
+      </div>
+    </div>
+    <div class="activity w3-third w3-container w3-margin-bottom">
+      <img src="img/activity1.jpg" alt="a1" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>DAEYOO LAND (대유ATV수렵사격랜드)</b></p>
+        <p>Daeyoo Land is the only shooting experience center in Jeju where hunting, shooting and ATV are gathered.</p>
+      </div>
+    </div>
+    <div class="activity w3-third w3-container w3-margin-bottom">
+      <img src="img/activity2.jpg" alt="a2" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>1100 Altitude (1100 고지)</b></p>
+        <p>Go to 1100 Altitude in the middle of Mt. Halla and enjoy the stars and the Milky Way with your own eyes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by Sungjoo Shin</p>
+</footer>
+
+</body>
+</html>

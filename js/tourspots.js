@@ -1,0 +1,41 @@
+$(document).ready(function(){
+    
+    // 필터 버튼 눌릴때 디자인 변경
+    $("#all").click(function(){
+        $("#ocean").removeClass("w3-black");
+        $("#mountain").removeClass("w3-black");
+        $("#activity").removeClass("w3-black");
+        $(this).addClass("w3-black");
+        $(".mountain").show();
+        $(".ocean").show();
+        $(".activity").show();
+    });
+    $("#mountain").click(function(){
+        $("#ocean").removeClass("w3-black");
+        $("#activity").removeClass("w3-black");
+        $("#all").removeClass("w3-black");
+        $(this).addClass("w3-black");
+        $(".mountain").show();
+        $(".ocean").hide();
+        $(".activity").hide();
+    });
+    $("#ocean").click(function(){
+        $("#mountain").removeClass("w3-black");
+        $("#activity").removeClass("w3-black");
+        $("#all").removeClass("w3-black");
+        $(this).addClass("w3-black");
+        $(".mountain").hide();
+        $(".ocean").show();
+        $(".activity").hide();
+    });
+    $("#activity").click(function(){
+        $("#ocean").removeClass("w3-black");
+        $("#mountain").removeClass("w3-black");
+        $("#all").removeClass("w3-black");
+        $(this).addClass("w3-black");
+        $(".mountain").hide();
+        $(".ocean").hide();
+        $(".activity").show();
+    });
+
+})

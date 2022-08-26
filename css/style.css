@@ -1,0 +1,51 @@
+body {
+    font-family: "Lato", sans-serif ;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    height: 46px;
+}
+
+.logo2 {
+    width: 30%;
+    height: auto;
+}
+
+.slideImage {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.slide{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact h2, .contact p {
+   position: relative;
+   top: 20px;
+}
+
+/* tourspots filters style */
+.filter i {
+    position: relative;
+    top: 2px;
+}
+
+.iconFilter {
+    position: relative;
+    top: -4px;
+    font-weight: bold;
+}
+
+#all {
+    height: 45.5px;
+}
+
+

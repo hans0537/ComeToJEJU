@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>ComeToJEJU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+
+<link type="text/css" rel="stylesheet" href="css/weather-icons.min.css">
+<link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/main.js"></script> 
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <img src="img/logo.jpg" alt="logo" class="w3-bar-item logo">
+    <a href="index.html#home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFO</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="HoneyTips">HONEYTIPS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#page-content" class="w3-bar-item w3-button">WEATHER</a>
+        <a href="airline.html" class="w3-bar-item w3-button">FLIGHTS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="index.html#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="index.html#info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INFO</a>
+  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#page-content" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WEATHER</a>
+  <a href="airline.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FLIGHTS</a>
+</div>
+
+<!-- Page content -->
+<div id="main_content" class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-- Automatic Slideshow Images -->
+  <div class="slideImage" id="home">
+    <img class="slide" src="img/jeju1.jpg" alt="jejuimg1">
+    <img class="slide" src="img/jeju2.jpg" alt="jejuimg2">
+    <img class="slide" src="img/jeju3.jpg" alt="jejuimg3">
+    <img class="slide" src="img/jeju4.jpg" alt="jejuimg4">
+  </div>  
+
+  <!-- weather -->
+  <div class="page-content page-container" id="page-content">
+    <div class="padding" style="padding-left: 185px;">
+      <div class="row container d-flex justify-content-center" style="padding: 0 50px;">
+          <!--weather card-->
+          <div class="card card-weather grid-margin stretch-card">
+            <div class="card-body">
+              <div class="weather-date-location">
+                <h3 style="font-weight: bold; font-size: 50px">JEJU</h3>
+                <p class="text-gray">
+                  <span class="weather-date" style="font-size: 20px;"></span>
+                  <span class="weather-location"></span>
+                </p>
+              </div>
+              <div class="weather-data d-flex">
+                <div class="mr-auto">
+                  <h4 class="display-3" style="font-weight: bold; font-size: 40px;"></h4>
+                  <p id="cWeather"></p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="d-flex weakly-weather">
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="weakly-weather-item">
+                  <p class="mb-1 bold"></p>
+                  <div id="rainPer"></div>
+                  <div id="weather-forecast"></div>
+                  <p class="mb-0"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-light-gray w3-container w3-padding-64 w3-center w3-opacity w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by Sungjoo Shin</p>
+</footer>
+</body>
+</html>

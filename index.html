@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>ComeToJEJU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="css/weather-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/main.js"></script> 
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <img src="img/logo.jpg" alt="logo" class="w3-bar-item logo">
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="#info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="HoneyTips">HONEYTIPS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="weather.html#page-content" class="w3-bar-item w3-button">WEATHER</a>
+        <a href="airline.html" class="w3-bar-item w3-button">FLIGHTS</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="#info" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">INFO</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="weather.html#page-content" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WEATHER</a>
+  <a href="airline.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FLIGHTS</a>
+</div>
+
+<!-- Page content -->
+<div id="main_content" class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-- Automatic Slideshow Images -->
+  <div class="slideImage" id="home">
+    <img class="slide" src="img/jeju1.jpg" alt="jejuimg1">
+    <img class="slide" src="img/jeju2.jpg" alt="jejuimg2">
+    <img class="slide" src="img/jeju3.jpg" alt="jejuimg3">
+    <img class="slide" src="img/jeju4.jpg" alt="jejuimg4">
+  </div>
+
+  <!-- info -->
+  <div class="w3-light-grey">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="info">
+      <img src="img/logo2.png" alt="logo2" class="logo2">
+      <h2 class="w3-wide">JEJU Island</h2>
+      <p class="w3-opacity"><i>Beautiful Scenery in Korea</i></p>
+      <p class="w3-justify">Where else can you find an azalea-framed volcano to climb, a sisterhood of deep-divers, and ancient stone statues on which to make wishes? Jeju Island. A favorite with newlyweds (and K-drama fans), this popular retreat is also home to miles of golden beaches, winding coastal trails, and Jeju Waterworld, the area’s largest water park. No matter what your fancy, one thing is for certain: a day of sightseeing isn’t complete without enjoying some of the isle’s delicious raw seafood and famed barbecued black pork.</p>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="img/matjib.jpg" alt="matjib" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>MatJib</b></p>
+            <p class="w3-opacity">Find Your Favorite Cuisine</p>
+            <p>Jeju has a variety of cuisines <br> Try It!!</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="location.href = 'matjib.html'">Details</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="img/tour.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Tour Spots</b></p>
+            <p class="w3-opacity">Must Visit Places in Jeju</p>
+            <p>Find cool places<br> And take a photo</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="location.href = 'tourspots.html'">Details</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="img/party.png" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Hot Place</b></p>
+            <p class="w3-opacity">Hot Places to Meet Friends</p>
+            <p>Wanna party?<br> Check hot places ASAP!</p>
+            <button class="w3-button w3-black w3-margin-bottom" id="alert">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+  <!-- contact -->
+  <div class="w3-white" id="contact">
+    <div class="w3-container w3-content contact" style="max-width:800px">
+      <h2 class="w3-wide w3-center">CONTACT</h2>
+      <p class="w3-opacity w3-center"><i>Wanna More Info? <br> Send Me a Message</i></p>
+      <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker" style="width:30px"></i> JEJU, South Korea<br>
+          <i class="fa fa-phone" style="width:30px"></i> Phone: +82 1012345678<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: gajja@mail.com<br>
+        </div>
+        <div class="w3-col m6">
+          <form name="frm" action="https://www.w3schools.com/action_page.php" method="get">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" name="name" placeholder="Name">
+              </div>
+              <div class="w3-half">
+                <input class="w3-input w3-border" type="text" name="email" placeholder="Email">
+              </div>
+            </div>
+            <input class="w3-input w3-border" type="text" name="message" placeholder="Message">
+            <input class="w3-button w3-black w3-section w3-right" id="btn" value="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-light-grey w3-padding-64 w3-center w3-opacity w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by Sungjoo Shin</p>
+</footer>
+</body>
+</html>
